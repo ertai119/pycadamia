@@ -1,5 +1,9 @@
+# -*- coding:utf-8 -*-
 from django.conf.urls import url
 from . import views
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 urlpatterns = [
     url(r'^$', views.index),
