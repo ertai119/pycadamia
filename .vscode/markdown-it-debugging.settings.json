@@ -1,0 +1,20 @@
+{
+    "markdownItOptions": {
+        "html": true,
+        "linkify": false,
+        "breaks": false,
+        "typographer": true,
+        "quotes": "“”‘’"
+    },
+    "plugins": [],
+    "testDataSet": [
+        "README.md"
+    ],
+    "debugSessionOptions": {
+        "saveHtmlFiles": true,
+        "showLastHTML": true,
+        "quitOnFirstPluginLoadFailure": false,
+        "quitOnFirstPluginActivationFailure": false,
+        "quitOnFirstRenderingFailure": true
+    }
+}

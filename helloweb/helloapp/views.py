@@ -3,11 +3,18 @@ from django.http import HttpResponse, HttpResponseRedirect, HttpResponseNotFound
 from .models import Candidate, Poll, Choice
 from django.db.models import Sum
 import datetime
+import redis
+
 
 # Create your views here.
 def index(request):
     candidates = Candidate.objects.all()
     context = {'candidates':candidates}
+
+    r = redis.StrictRedis(host='localhost', port=6379)
+    r.set('1', 'world')
+    r.get('1')
+
     return render(request, 'helloapp/index.html', context)
 
 
